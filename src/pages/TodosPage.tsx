@@ -29,17 +29,17 @@ const staticData = [
 ];
 
 export const TodosPage: React.FunctionComponent = () => {
-  const [todos, setTodos] = useState<ITodo[]>([]);
+  const [todos, setTodos] = useState<ITodo[]>(staticData);
 
-  useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem('todos') || '[]') as ITodo[];
+  // useEffect(() => {
+  //   const saved = JSON.parse(localStorage.getItem('todos') || '[]') as ITodo[];
 
-    setTodos(saved);
-  }, []);
+  //   setTodos(saved);
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
+  // useEffect(() => {
+  //   localStorage.setItem('todos', JSON.stringify(todos));
+  // }, [todos]);
 
   const addHandler = (title: string) => {
     const newTodo: ITodo = {
