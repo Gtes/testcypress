@@ -5,6 +5,29 @@ import { TodoList } from '../components/TodoList';
 import { ITodo } from '../interfaces';
 declare const confirm: (question: string) => boolean;
 
+const staticData = [
+  {
+    id: 1,
+    title: 'ha Johansson',
+    completed: true,
+  },
+  {
+    id: 2,
+    title: 'sdf sdf',
+    completed: true,
+  },
+  {
+    id: 3,
+    title: 'cvb bvccb',
+    completed: false,
+  },
+  {
+    id: 4,
+    title: 'asd asd',
+    completed: false,
+  },
+];
+
 export const TodosPage: React.FunctionComponent = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
