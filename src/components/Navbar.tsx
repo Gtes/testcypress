@@ -1,5 +1,5 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Navbar: React.FunctionComponent = () => (
   <nav>
@@ -7,7 +7,8 @@ export const Navbar: React.FunctionComponent = () => (
       <a className="brand-logo" href="/">
         React + Typescript
       </a>
-      <ul className="right hide-on-med-and-down" id="nav-mobile">
+      {/* <ul className="right hide-on-med-and-down" id="nav-mobile"> */}
+      <ul className="right hide-on-small-only" id="nav-mobile">
         <li>
           <NavLink to="/">Todo</NavLink>
         </li>
